@@ -3,8 +3,6 @@ import './App.css';
 import {credit1AC, credit2AC, debitAC, setBalanceAC, updateBalanceAC} from "./Redux/Reducer";
 import {useDispatch, useSelector} from "react-redux";
 import {reducer} from "./Redux/Reducer";
-import {} from "./Redux/Store"
-
 
 // -----------------------------STORE with redux dev tool------------------
 import { createStore, compose } from "redux";
@@ -19,13 +17,12 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 export const store = createStore(reducer, undefined, composeEnhancers());
 //@ts-ignore
 window.store = store;
-
-// ---------------------------------------------------------------------
-
+export type AppStoreType = ReturnType<typeof reducer>
+// ----------------------------------------------------------------------
 
 function App() {
 
-    const balance=useSelector<any>(state=>state.number)
+    const balance=useSelector<AppStoreType, number>(state=>state.number)
     const dispatch=useDispatch()
 
     const updateBalance = function handler() {

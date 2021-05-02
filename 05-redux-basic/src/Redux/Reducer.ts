@@ -4,7 +4,43 @@ type Action = { type: string, payload: number }
 
 const initState:initStateType = {number: 0};
 
-export const reducer = (state=initState, action: Action) => {
+//---------------------------------------------------------------------
+export interface UpdateBalanceAction  {
+    type: 'UPDATE_BALANCE'
+    payload: number
+}
+
+export interface CreditAction1 extends Action {
+    type: 'CREDIT1';
+    payload: number
+}
+
+export interface CreditAction2 extends Action {
+    type: 'CREDIT2';
+    payload: number
+}
+
+export interface SubtractPercentageAction  {
+    type: 'SET_BALANCE_WITH_TAX';
+    payload: number
+}
+
+export interface DebitAction  {
+    type: 'DEBIT';
+    payload: number
+}
+
+export type BalanceAction = UpdateBalanceAction |
+    CreditAction1 |
+    CreditAction2 |
+    SubtractPercentageAction |
+    DebitAction;
+//-------------------------------------------------------------------------
+
+
+
+
+export const reducer = (state=initState, action: BalanceAction) => {
 
     switch (action.type) {
 
