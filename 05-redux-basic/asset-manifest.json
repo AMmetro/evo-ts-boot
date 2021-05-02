@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/05-redux-basic/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/05-redux-basic/static/js/main.e1ad1c3b.chunk.js",
-    "main.js.map": "/05-redux-basic/static/js/main.e1ad1c3b.chunk.js.map",
-    "runtime-main.js": "/05-redux-basic/static/js/runtime-main.54e97261.js",
-    "runtime-main.js.map": "/05-redux-basic/static/js/runtime-main.54e97261.js.map",
-    "static/js/2.dd52e62a.chunk.js": "/05-redux-basic/static/js/2.dd52e62a.chunk.js",
-    "static/js/2.dd52e62a.chunk.js.map": "/05-redux-basic/static/js/2.dd52e62a.chunk.js.map",
-    "static/js/3.24779403.chunk.js": "/05-redux-basic/static/js/3.24779403.chunk.js",
-    "static/js/3.24779403.chunk.js.map": "/05-redux-basic/static/js/3.24779403.chunk.js.map",
-    "index.html": "/05-redux-basic/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/05-redux-basic/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.dd52e62a.chunk.js.LICENSE.txt": "/05-redux-basic/static/js/2.dd52e62a.chunk.js.LICENSE.txt"
+    "main.css": "/evo-ts-boot/05-redux-basic/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/evo-ts-boot/05-redux-basic/static/js/main.e1ad1c3b.chunk.js",
+    "main.js.map": "/evo-ts-boot/05-redux-basic/static/js/main.e1ad1c3b.chunk.js.map",
+    "runtime-main.js": "/evo-ts-boot/05-redux-basic/static/js/runtime-main.7d15026f.js",
+    "runtime-main.js.map": "/evo-ts-boot/05-redux-basic/static/js/runtime-main.7d15026f.js.map",
+    "static/js/2.dd52e62a.chunk.js": "/evo-ts-boot/05-redux-basic/static/js/2.dd52e62a.chunk.js",
+    "static/js/2.dd52e62a.chunk.js.map": "/evo-ts-boot/05-redux-basic/static/js/2.dd52e62a.chunk.js.map",
+    "static/js/3.24779403.chunk.js": "/evo-ts-boot/05-redux-basic/static/js/3.24779403.chunk.js",
+    "static/js/3.24779403.chunk.js.map": "/evo-ts-boot/05-redux-basic/static/js/3.24779403.chunk.js.map",
+    "index.html": "/evo-ts-boot/05-redux-basic/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/evo-ts-boot/05-redux-basic/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.dd52e62a.chunk.js.LICENSE.txt": "/evo-ts-boot/05-redux-basic/static/js/2.dd52e62a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.54e97261.js",
+    "static/js/runtime-main.7d15026f.js",
     "static/js/2.dd52e62a.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
     "static/js/main.e1ad1c3b.chunk.js"
