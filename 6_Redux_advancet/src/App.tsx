@@ -15,7 +15,6 @@ import { useApp } from "./hooks";
 function App() {
     const { totalPrice, pizza, plusPizzaBucket, minusPizzaBucket, bucket } = useApp();
 
-
     const handleMinusPizza = useCallback((_id: string) => { minusPizzaBucket(_id);
     }, [pizza, bucket]);
 

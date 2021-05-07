@@ -1,24 +1,23 @@
 import {Pizza, Basket} from '../../src/types'
 export const initialBuscetState:Basket =[];
 
-export const buscetReducer = (state = initialBuscetState, action: PizzaBucket): Basket => {
+export const buscetReducer = (state = initialBuscetState, action: PizzaBucket): any => {
     switch (action.type) {
         case "plusPizzaBucket": {
-        const copyBacket = [...state]
-              copyBacket.push(action.payload)
-         return state = copyBacket
+        const copyBacket = [...state, {...action.payload, count:1}]
+           return state = copyBacket
         }
 
-        case "minusPizzaBucket": {
-            const copyBacket = [...state]
-            const indexPizza = copyBacket.findIndex( (item:any) => item._id === action.payload );
-            if (indexPizza !== -1) {
-                copyBacket.splice(indexPizza, 1)
-                return state = copyBacket
-            }
-            return state = copyBacket
-        }
-        default: return state;
+        // case "minusPizzaBucket": {
+        //     const copyBacket = [...state]
+        //     const indexPizza = copyBacket.findIndex( (item:any) => item._id === action.payload );
+        //     if (indexPizza !== -1) {
+        //         copyBacket.splice(indexPizza, 1)
+        //         return state = copyBacket
+        //     }
+        //     return state = copyBacket
+        // }
+        // default: return state;
     }
 };
 
