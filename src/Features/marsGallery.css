@@ -1,0 +1,26 @@
+.image_container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image_item {
+  width: 100px;
+  margin: 5px;
+}
+
+.heart{
+  position: relative;
+  top: 30px;
+  left: 30px;
+  cursor: pointer;
+}
+
+.photos_link{
+  color: blue;
+  /*background-color: green;*/
+}
+
+.activeLink{
+  color: blue;
+}
