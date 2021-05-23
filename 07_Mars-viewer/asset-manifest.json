@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/evo-ts-boot/07_Mars-viewer/static/css/main.06f792b7.chunk.css",
+    "main.js": "/evo-ts-boot/07_Mars-viewer/static/js/main.9cb9387c.chunk.js",
+    "main.js.map": "/evo-ts-boot/07_Mars-viewer/static/js/main.9cb9387c.chunk.js.map",
+    "runtime-main.js": "/evo-ts-boot/07_Mars-viewer/static/js/runtime-main.0885d8a6.js",
+    "runtime-main.js.map": "/evo-ts-boot/07_Mars-viewer/static/js/runtime-main.0885d8a6.js.map",
+    "static/js/2.303380c9.chunk.js": "/evo-ts-boot/07_Mars-viewer/static/js/2.303380c9.chunk.js",
+    "static/js/2.303380c9.chunk.js.map": "/evo-ts-boot/07_Mars-viewer/static/js/2.303380c9.chunk.js.map",
+    "static/js/3.de44a56e.chunk.js": "/evo-ts-boot/07_Mars-viewer/static/js/3.de44a56e.chunk.js",
+    "static/js/3.de44a56e.chunk.js.map": "/evo-ts-boot/07_Mars-viewer/static/js/3.de44a56e.chunk.js.map",
+    "index.html": "/evo-ts-boot/07_Mars-viewer/index.html",
+    "static/css/main.06f792b7.chunk.css.map": "/evo-ts-boot/07_Mars-viewer/static/css/main.06f792b7.chunk.css.map",
+    "static/js/2.303380c9.chunk.js.LICENSE.txt": "/evo-ts-boot/07_Mars-viewer/static/js/2.303380c9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0885d8a6.js",
+    "static/js/2.303380c9.chunk.js",
+    "static/css/main.06f792b7.chunk.css",
+    "static/js/main.9cb9387c.chunk.js"
+  ]
+}
