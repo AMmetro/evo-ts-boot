@@ -9,7 +9,7 @@ export type actionType = {type: "addData", payload: stateItem[]}
 export const ImagesReducer = (state = initialState, action: actionType): stateItem[] => {
  switch (action.type) {
   case "addData": {
-   return state=[...state, ...action.payload]
+   return state=[...action.payload]
   }
   default: return state;
  }

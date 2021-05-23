@@ -10,6 +10,7 @@ import "./marsGallery.css"
 import Heart from "./Heart";
 import {addFavoriteAC} from "../Store/FavoriteReducer";
 
+export type ImgPropsType={id: number, img_src: string}
 
 type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
 type InputRefType = DefaultInputPropsType & { current: any };
@@ -29,14 +30,14 @@ function PhotosPage() {
         API.getPhotos(inputRef.current.value)
             .then((res) =>{
                 dispatch(addDataAC(res.data.photos))
-                dispatch(setLoadStatusAC())
+                dispatch(setLoadStatusAC(res.data.photos.length))
             })
             .catch((res) => console.log(res))
     }
 
 
-    const onHeartClick=(id:number)=>{
-     dispatch(addFavoriteAC(id))
+    const onHeartClick=(imgProps:ImgPropsType)=>{
+     dispatch(addFavoriteAC(imgProps))
     }
 
 
@@ -46,18 +47,19 @@ function PhotosPage() {
             <div> Select Sol and press "load"!</div>
 
             <div>
-                <input ref={inputRef}/>
+                <input type={"number"} min="1" max="10" ref={inputRef} style={{width: 150}}/>
                 <button onClick={clickHandler}>load</button>
             </div>
 
-            <div> {Status.loadingStatus}</div>
-
             {Images.length === 0
+            ? <div> {Status.loadingStatus}</div>
+            : Images.length === 0
                 ? null
                 : <div className={"image_container"}>
-                    { Images.map(elem => {return (
-                            <div key={elem.id}>
-                                <Heart onHeartClick={onHeartClick} id={elem.id}/>
+                    { Images.map(elem => {
+                        return (
+                           <div key={elem.id}>
+                                <Heart onHeartClick={onHeartClick} imgProps={elem}/>
                                 <img key={elem.id}
                                  className={"image_item"}
                                  src={`${elem.img_src}`}

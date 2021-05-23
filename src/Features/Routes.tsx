@@ -8,11 +8,11 @@ import Favorites from "./Favorites";
 function Routes() {
     return (
         <div>
-             <Switch>
+           <Switch>
               <Route path={"/"} exact render={() => <PhotosPage/>}/>
               <Route path={"/photos"} render={() => <PhotosPage/>}/>
               <Route path={"/favorites"} render={() => <Favorites/>}/>
-     </Switch>
+           </Switch>
     </div>
 );
 }

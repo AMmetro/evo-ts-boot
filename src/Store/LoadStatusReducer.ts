@@ -2,13 +2,14 @@ export type InitialStateType={loadingStatus: string}
 export const initialState:InitialStateType ={loadingStatus: "Photos are not loaded"};
 
 
-export type actionType = {type: string}
+export type actionType = {type: string, payload:number}
 
 export const LoadStatusReducer = (state = initialState, action: actionType): InitialStateType => {
  switch (action.type) {
 
   case "setLoadStatus": {
-   return state= {loadingStatus: "Load success"}
+    if (action.payload === 0 ) {return state= {loadingStatus: "No photos for this sol"}}
+    else { return state= {loadingStatus: "Load success"} }
   }
 
   case "setLoadingStatus": {
@@ -21,6 +22,6 @@ export const LoadStatusReducer = (state = initialState, action: actionType): Ini
 
 
 export const setLoadingStatusAC = () => { return {type: "setLoadingStatus"} };
-export const setLoadStatusAC = () => { return {type: "setLoadStatus"} };
+export const setLoadStatusAC = (length:number) => { return {type: "setLoadStatus", payload: length} };
 
 

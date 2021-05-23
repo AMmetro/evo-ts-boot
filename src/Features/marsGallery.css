@@ -15,3 +15,12 @@
   left: 30px;
   cursor: pointer;
 }
+
+.photos_link{
+  color: blue;
+  /*background-color: green;*/
+}
+
+.activeLink{
+  color: blue;
+}

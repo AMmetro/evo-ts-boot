@@ -1,21 +1,29 @@
 
-export const initialState: number[] =[];
+import {ImgPropsType} from "../Features/PhotosPage"
+import {useDispatch} from "react-redux";
+
+export const initialState: ImgPropsType[] =[];
+
+export type actionType = {type: string, payload: ImgPropsType}
 
 
-export type actionType = {type: string, payload: number}
 
-export const FavoriteReducer = (state = initialState, action: actionType): number[] => {
+export const FavoriteReducer = (state = initialState, action: actionType): ImgPropsType[] => {
+
  switch (action.type) {
   case "addFavoriteImage": {
-      let indexOfId = state.indexOf(action.payload)
-      if (indexOfId === -1) {
-          const newState=[...state, action.payload]
+      const isImgSame = state.filter (elem => elem.id === action.payload.id)
+      if (isImgSame.length === 0) { return state=[...state, action.payload] }
+      else {
+          const newState = state.filter(elem => elem.id !== action.payload.id )
           return newState
-      } else {return state}
+      }
+      return state
   };
 
+
      case "removeFavoriteImage": {
-         const newState = state.filter(elem => elem !== action.payload )
+         const newState = state.filter(elem => elem.id !== action.payload.id )
          return newState
      }
 
@@ -24,7 +32,7 @@ export const FavoriteReducer = (state = initialState, action: actionType): numbe
 };
 
 
-export const addFavoriteAC = (imgId:number) => {return {type: "addFavoriteImage", payload: imgId}};
-export const removeFavoriteAC = (imgId:number) => {return {type: "removeFavoriteImage", payload: imgId}};
+export const addFavoriteAC = (imgProps:ImgPropsType) => {return {type: "addFavoriteImage", payload: imgProps}};
+export const removeFavoriteAC = (imgProps:ImgPropsType) => {return {type: "removeFavoriteImage", payload: imgProps}};
 
 
